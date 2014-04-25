@@ -1,0 +1,15 @@
+{
+    "name": "desmart/support",
+    "description": "Support package for DeSmart projects",
+    "authors": [
+        {
+            "name": "Radoslaw Mejer",
+            "email": "radmen@desmart.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/DeSmart/Support/helpers.php"
+        ]
+    }
+}
