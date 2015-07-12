@@ -15,7 +15,12 @@ trait GenerateUuidTrait
     public function generateOrderedUuid1($useHardwareAddress = false, $withDashes = false)
     {
         $uuid = $this->generateUuid1($useHardwareAddress, $withDashes);
-        $uuid = substr($uuid, 12, 4) . substr($uuid, 8, 4) . substr($uuid, 0, 8) . substr($uuid, 16);
+
+        if (false === $withDashes) {
+            $uuid = substr($uuid, 12, 4) . substr($uuid, 8, 4) . substr($uuid, 0, 8) . substr($uuid, 16);
+        } else {
+            $uuid = substr($uuid, 14, 5) . substr($uuid, 9, 5) . substr($uuid, 0, 9) . substr($uuid, 19);
+        }
 
         return $uuid;
     }
