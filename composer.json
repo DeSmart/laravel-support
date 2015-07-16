@@ -8,8 +8,10 @@
         }
     ],
     "require": {
-        "ramsey/uuid": "^3.0@dev",
-        "moontoast/math": "1.*"
+        "ramsey/uuid": "^3.0@dev"
+    },
+    "suggest": {
+        "moontoast/math": "Required for 32-bit processors"
     },
     "autoload": {
         "psr-4": {
@@ -19,9 +21,4 @@
             "src/helpers.php"
         ]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "DeSmart\\Support\\Stubs\\": "stubs/"
-        }
-    }
 }
