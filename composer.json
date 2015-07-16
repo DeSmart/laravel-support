@@ -8,14 +8,15 @@
         }
     ],
     "require": {
-        "ramsey/uuid": "^3.0@dev"
+        "ramsey/uuid": "^3.0@dev",
+        "moontoast/math": "1.*"
     },
     "autoload": {
-        "psr-0": {
-            "DeSmart\\Support": "src/"
+        "psr-4": {
+            "DeSmart\\Support\\": "src/"
         },
         "files": [
-            "src/DeSmart/Support/helpers.php"
+            "src/helpers.php"
         ]
     }
 }
