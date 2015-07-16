@@ -2,7 +2,6 @@
 
 use Ramsey\Uuid\FeatureSet;
 use Ramsey\Uuid\PeclUuidFactory;
-use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactory;
 
 class GenerateUuid
@@ -28,9 +27,8 @@ class GenerateUuid
          * and generate random string according to RFC 4122, Section 4.5.
          */
         $factory = new PeclUuidFactory(new UuidFactory(new FeatureSet(false, false, false, true)));
-        Uuid::setFactory($factory);
 
-        $uuid = (string)Uuid::uuid1();
+        $uuid = (string)$factory->uuid1();
         $uuid = str_replace('-', '', $uuid);
 
         return $uuid;

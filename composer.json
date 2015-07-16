@@ -18,5 +18,10 @@
         "files": [
             "src/helpers.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeSmart\\Support\\Stubs\\": "stubs/"
+        }
     }
 }
