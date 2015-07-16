@@ -7,9 +7,18 @@
             "email": "radmen@desmart.com"
         }
     ],
+    "require": {
+        "ramsey/uuid": "^3.0@dev"
+    },
+    "suggest": {
+        "moontoast/math": "Required for 32-bit processors"
+    },
     "autoload": {
+        "psr-4": {
+            "DeSmart\\Support\\": "src/"
+        },
         "files": [
-            "src/DeSmart/Support/helpers.php"
+            "src/helpers.php"
         ]
-    }
+    },
 }
