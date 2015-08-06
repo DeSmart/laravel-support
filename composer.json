@@ -20,5 +20,9 @@
         "files": [
             "src/helpers.php"
         ]
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.2",
+        "phpunit/phpunit": "^4.7"
     }
 }

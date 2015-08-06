@@ -1,7 +1,6 @@
 <?php namespace DeSmart\Support;
 
 use Ramsey\Uuid\FeatureSet;
-use Ramsey\Uuid\PeclUuidFactory;
 use Ramsey\Uuid\UuidFactory;
 use Ramsey\Uuid\UuidFactoryInterface;
 
@@ -33,7 +32,7 @@ class Uuid
      */
     public static function generateUuid()
     {
-        $generator = new static(new PeclUuidFactory(new UuidFactory(new FeatureSet(false, false, false, true))));
+        $generator = new static(new UuidFactory(new FeatureSet(false, false, false, true)));
 
         return $generator->generateOrderedUuid1();
     }
